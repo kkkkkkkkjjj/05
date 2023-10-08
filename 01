@@ -3,17 +3,26 @@
 
 int main() {
     
-    int x, sum = 0;
+    int a,b;
+    char operator;
 
-    printf("input a number :\n");
-    scanf("%d",&x);
+    printf("enter the calculation :\n");
+    scanf("%d %c %d ", &a, &operator, &b);
 
-    for (int i = 1; i <= x; i++){
-        sum += i;
-    }
+    int result;
 
-    printf("the result is %d\n",sum);
+    if (operator == '+'){
+        result = a + b;
+    } else if (operator == '-'){
+        result = a - b;
+    } else if (operator == '*'){
+        result = a * b;
+    } 
 
+    printf( " = %d ",result);
 
     return 0;
-}
+        
+    }
+
+

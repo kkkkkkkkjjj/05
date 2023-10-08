@@ -3,23 +3,25 @@
 
 int main() {
     
-    int a,b;
-    char operator;
+    int answer = 60;
+    int guess ;
+    int try = 0;
 
-    printf("enter the calculation :\n");
-    scanf("%d %c %d ", &a, &operator, &b);
+    do {
+        printf( "guess a number :\n");
+        scanf("%d", &guess);
+        try++;
 
-    int result;
+        if(guess > answer){
+            printf(" high !\n ");
+        } else if (guess < answer){
+            printf("low !\n");
+        } else {
+            printf( "Congratulations! trials : %d\n",try);
+        }
 
-    if (operator == '+'){
-        result = a + b;
-    } else if (operator == '-'){
-        result = a - b;
-    } else if (operator == '*'){
-        result = a * b;
-    } 
-
-    printf( " = %d ",result);
+    } while (guess != answer);
+    
 
     return 0;
         

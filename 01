@@ -2,18 +2,14 @@
 #include <stdlib.h>
 
 int main() {
-    int a;
+    int x;
 
-    printf("정수 하나를 입력하세요:\n ");
-    scanf("%d", &a);
+    printf("정수 하나를 입력하세요: \n");
+    scanf("%d", &x);
 
-    if (a > 0) {
-        printf(" 양수입니다.\n");
-    } else if (a < 0) {
-        printf(" 음수입니다.\n");
-    } else {
-        printf("  0입니다.\n");
-    }
+    int X = (x < 0) ? -x : x;
+
+    printf("절대값은 %d 입니다.\n", X);
 
     return 0;
 }

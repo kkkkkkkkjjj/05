@@ -2,14 +2,18 @@
 #include <stdlib.h>
 
 int main() {
-    int x;
+    char c;
+    int result = 0;
 
-    printf("정수 하나를 입력하세요: \n");
-    scanf("%d", &x);
+    printf("input a string:\n ");
+    
+    while ((c = getchar()) != '\n') {
+        if (c >= '0' && c <= '9') {
+            result++;
+        }
+    }
 
-    int X = (x < 0) ? -x : x;
-
-    printf("절대값은 %d 입니다.\n", X);
+    printf("the number of digits is : %d\n", result);
 
     return 0;
 }
